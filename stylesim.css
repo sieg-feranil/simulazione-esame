@@ -1,5 +1,5 @@
 /* ruleset */
-*{
+* {
     font-family: 'Arvo', serif;
     font-family: 'DM Sans', sans-serif;
     color: rgb(198, 198, 198);
@@ -8,13 +8,16 @@
     text-decoration: none;
     list-style: none;
 }
+
 i {
     cursor: pointer;
 }
+
 /* left conteiner */
 .left-conteiner {
     padding: 10px 20px 0 20px;
 }
+
 /* display flex */
 body,
 .nav-left,
@@ -25,56 +28,76 @@ footer,
 .single-song,
 .img-title,
 .f-vol,
-.ai-nav {
+.ai-nav,
+.left-conteiner,
+.liked-songs {
     display: flex;
 }
+
 main {
     flex-grow: 20;
 }
+
 body {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.91);
 }
+
 label i {
     cursor: pointer;
 }
+
 /* nav left */
 
 .nav-left {
     flex-direction: column;
     flex-grow: 2;
 }
+
 /* menu top left */
 #menu_toggle {
     opacity: 0;
 }
+
 .menu_box {
     display: none;
     padding-left: 0;
     margin-bottom: 10;
 }
+
 .menu_box li {
     padding: 10px;
 }
+
 .menu_box li a {
     text-decoration: none;
     padding: 10px;
     cursor: pointer;
 }
+
 #menu_toggle:checked~.menu_box {
     display: initial;
 }
+
 /* img left */
-img {
-    width: 160px;
+.left-conteiner {
+    flex-direction: column;
 }
+
+.left-conteiner img {
+    width: 160px;
+    margin-top: auto;
+}
+
 /* playlist */
 .top-pl {
     padding: 10px;
 }
+
 .top-pl a {
     padding: 10px;
 }
+
 /* artist info */
 .main-screen {
     flex-direction: column;
@@ -87,30 +110,47 @@ img {
     background-size: 100%;
     padding: 10px 50px;
     flex-grow: 20;
-    
+
 }
+
 .ai-nav {
-   justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
+
 .ai-nav div:first-child a {
     background-color: rgba(0, 0, 0, 0.538);
     border-radius: 50%;
     padding: 5px 10px;
 }
-.ai-nav div:last-child{
+
+.ai-nav div:last-child {
     background-color: rgba(0, 0, 0, 0.538);
     padding: 3px 20px;
     border-radius: 20px;
 }
+
+.artist-info>i {
+    margin-left: 30px;
+    color: blue;
+}
+
+.artist-info span:last-child {
+    margin-left: 30px;
+    color: white;
+}
+
 /* options */
 .options * {
     padding: 5px 50px;
 }
+
 .options {
     flex-grow: 5;
     padding: 10px;
     align-items: center;
 }
+
 .options input[type="button"] {
     background-color: transparent;
     border: 1px solid white;
@@ -118,27 +158,44 @@ img {
     border-radius: 10px;
     cursor: pointer;
 }
+
 .options i:first-of-type {
     color: rgb(33, 174, 33);
 }
+
 /* songs part */
 .songs-part {
     flex-direction: row;
-    flex-grow: 10;
     padding: 5px 30px;
 }
+
 .single-song {
     align-items: center;
     justify-content: space-between;
-    padding: 5px;
+    padding: 10px;
     margin-top: 5px;
+    border-radius: 5px;
 }
 
-.single-song img{
+.single-song i:last-child {
+    opacity: 0;
+}
+
+.single-song:hover {
+    background-color: rgba(128, 128, 128, 0.414);
+    cursor: pointer;
+}
+
+.single-song:hover i:last-child {
+    opacity: 1;
+}
+
+.single-song img {
     height: 40px;
     width: 40px;
     margin: 0px 3px 0px 20px;
 }
+
 /* left */
 .left {
     flex-grow: 10;
@@ -146,9 +203,14 @@ img {
 
 /* right */
 .right {
-    flex-grow: 4;
+    flex-shrink: 1;
     padding: 30px;
 }
+
+.right img {
+    height: 100px;
+}
+
 /* footer */
 footer {
     flex-grow: 3;
@@ -157,35 +219,62 @@ footer {
     align-items: center;
     border-top: 1px solid rgba(128, 128, 128, 0.232);
 }
+
 .f-vol * {
-    padding:3px;
+    padding: 3px;
 }
+
 .f-vol {
     align-items: center;
 }
+
 #volume-bar {
     height: 1px;
     width: 60px;
     background-color: white;
     border-radius: 5px;
 }
+
 .f-player {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #time-stamp {
     width: 500px;
     display: flex;
     align-items: center;
 }
+
 #time-stamp div:first-child {
     background-color: white;
     height: 3px;
     width: 33%;
 }
+
 #time-stamp div:last-child {
     background-color: rgb(130, 120, 120);
     height: 3px;
     width: 64%;
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+}
+
+.f-st span:first-child {
+    color: white;
+}
+
+.f-st span:last-child {
+    font-size: small;
+}
+
+.f-player i:first-child {
+    color: rgb(33, 174, 33);
+}
+h3 {
+    margin-bottom: 30px;
 }
